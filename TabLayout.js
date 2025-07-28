@@ -74,6 +74,10 @@ export default function TapLayout() {
           name="Components"
           component={ComponentsPage}
           options={{
+            headerShown: true,
+            title: "Basic Components",
+            headerTitleAlign: "center",
+            tabBarLabel: "Components",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="puzzle-outline"
@@ -87,6 +91,10 @@ export default function TapLayout() {
           name="JavaScript"
           component={JavaScriptPage}
           options={{
+            headerShown: true,
+            title: "JavaScript for React Native",
+            headerTitleAlign: "center",
+            tabBarLabel: "JavaScript",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="code-json"

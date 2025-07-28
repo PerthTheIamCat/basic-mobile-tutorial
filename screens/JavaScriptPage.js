@@ -11,8 +11,6 @@ export default function JavaScriptPage() {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.pageTitle}>JavaScript for React Native</Text>
-
       <View style={styles.block}>
         <Text style={styles.componentTitle}>Variable (ตัวแปร)</Text>
         <Text style={styles.description}>
@@ -201,12 +199,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: "#f5f5f5",
     marginTop: Constants.statusBarHeight,
-  },
-  pageTitle: {
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginVertical: 10,
   },
   block: {
     marginVertical: 10,
