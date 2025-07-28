@@ -13,53 +13,63 @@
 ### สิ่งที่ต้องมี
 
 ก่อนที่คุณจะเริ่ม ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้งสิ่งต่อไปนี้ในระบบของคุณแล้ว:
-*   **Node.js และ npm:** คุณสามารถดาวน์โหลดได้จาก [nodejs.org](https://nodejs.org/)
-*   **Expo Go App:** ติดตั้งแอป Expo Go บนอุปกรณ์ iOS หรือ Android ของคุณเพื่อรันโปรเจกต์
-    *   [ดาวน์โหลดสำหรับ Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
-    *   [ดาวน์โหลดสำหรับ iOS](https://apps.apple.com/us/app/expo-go/id982107779)
+
+* **Node.js และ npm:** คุณสามารถดาวน์โหลดได้จาก [nodejs.org](https://nodejs.org/)
+* **Expo Go App:** ติดตั้งแอป Expo Go บนอุปกรณ์ iOS หรือ Android ของคุณเพื่อรันโปรเจกต์
+  * [ดาวน์โหลดสำหรับ Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
+  * [ดาวน์โหลดสำหรับ iOS](https://apps.apple.com/us/app/expo-go/id982107779)
 
 ### การติดตั้ง
 
-1.  **Clone a repository:**
-    ```sh
-    git clone <your-repository-url>
-    ```
-2.  **เข้าไปยังไดเรกทอรีของโปรเจกต์:**
-    ```sh
-    cd midterm
-    ```
-3.  **ติดตั้งแพ็คเกจ NPM:**
-    ```sh
-    npm install
-    ```
+1. **Clone a repository:**
+
+   ```sh
+   git clone <your-repository-url>
+   ```
+
+2. **เข้าไปยังไดเรกทอรีของโปรเจกต์:**
+
+   ```sh
+   cd midterm
+   ```
+
+3. **ติดตั้งแพ็คเกจ NPM:**
+
+   ```sh
+   npm install
+   ```
 
 ## การใช้งาน
 
 เมื่อการติดตั้งเสร็จสมบูรณ์ คุณสามารถรันแอปพลิเคชันโดยใช้คำสั่งใดคำสั่งหนึ่งต่อไปนี้:
 
-*   **เพื่อเริ่มเซิร์ฟเวอร์การพัฒนา:**
-    ```sh
-    npx expo start
-    ```
-    คำสั่งนี้จะเปิดแท็บใหม่ในเบราว์เซอร์ของคุณพร้อมกับ Expo Developer Tools จากนั้นคุณสามารถสแกน QR code ด้วยแอป Expo Go บนโทรศัพท์ของคุณเพื่อเปิดโปรเจกต์
+* **เพื่อเริ่มเซิร์ฟเวอร์การพัฒนา:**
 
-*   **เพื่อรันบน iOS simulator (สำหรับ macOS เท่านั้น):**
-    ```sh
-    npm run ios
-    ```
+  ```sh
+  npx expo start
+  ```
 
-*   **เพื่อรันบน Android emulator:**
-    ```sh
-    npm run android
-    ```
+  คำสั่งนี้จะเปิดแท็บใหม่ในเบราว์เซอร์ของคุณพร้อมกับ Expo Developer Tools จากนั้นคุณสามารถสแกน QR code ด้วยแอป Expo Go บนโทรศัพท์ของคุณเพื่อเปิดโปรเจกต์
+
+* **เพื่อรันบน iOS simulator (สำหรับ macOS เท่านั้น):**
+
+  ```sh
+  npm run ios
+  ```
+
+* **เพื่อรันบน Android emulator:**
+
+  ```sh
+  npm run android
+  ```
 
 ## หัวข้อที่ครอบคลุม
 
 แอปพลิเคชันแบ่งออกเป็นหลายแท็บ โดยแต่ละแท็บจะเน้นแนวคิดหลักที่แตกต่างกัน:
 
-*   **Setup:** คำแนะนำเกี่ยวกับวิธีการสร้างและรันโปรเจกต์ Expo ใหม่
-*   **Dimensions:** สาธิตวิธีการใช้ `Dimensions` และ `Constants` เพื่อสร้างเลย์เอาต์ที่ปรับเปลี่ยนตามขนาดหน้าจอที่แตกต่างกัน โดยเฉพาะการจัดการพื้นที่ของ status bar
-*   **Flex:** สนามเด็กเล่นแบบโต้ตอบสำหรับการเรียนรู้คุณสมบัติของ `flexbox` เช่น `flexDirection`, `justifyContent`, และ `alignItems`
-*   **Flex Wrap:** แสดงวิธีการทำงานของ `flexWrap` เพื่อควบคุมการตัดคำของรายการภายใน flex container
-*   **Components:** ภาพรวมของคอมโพเนนต์พื้นฐานของ React Native เช่น `View`, `Text`, `Button`, `Image` และอื่นๆ พร้อมตัวอย่างโค้ด
-*   **JavaScript:** ครอบคลุมแนวคิด JavaScript ที่จำเป็นสำหรับการพัฒนา React Native รวมถึงตัวแปร, ฟังก์ชัน, อ็อบเจกต์, อาร์เรย์ และคุณสมบัติที่ทันสมัยเช่น `useState`, `.map()` สำหรับการเรนเดอร์ลิสต์ และการเรนเดอร์ตามเงื่อนไข
+* **Setup:** คำแนะนำเกี่ยวกับวิธีการสร้างและรันโปรเจกต์ Expo ใหม่
+* **Dimensions:** สาธิตวิธีการใช้ `Dimensions` และ `Constants` เพื่อสร้างเลย์เอาต์ที่ปรับเปลี่ยนตามขนาดหน้าจอที่แตกต่างกัน โดยเฉพาะการจัดการพื้นที่ของ status bar
+* **Flex:** สนามเด็กเล่นแบบโต้ตอบสำหรับการเรียนรู้คุณสมบัติของ `flexbox` เช่น `flexDirection`, `justifyContent`, และ `alignItems`
+* **Flex Wrap:** แสดงวิธีการทำงานของ `flexWrap` เพื่อควบคุมการตัดคำของรายการภายใน flex container
+* **Components:** ภาพรวมของคอมโพเนนต์พื้นฐานของ React Native เช่น `View`, `Text`, `Button`, `Image` และอื่นๆ พร้อมตัวอย่างโค้ด
+* **JavaScript:** ครอบคลุมแนวคิด JavaScript ที่จำเป็นสำหรับการพัฒนา React Native รวมถึงตัวแปร, ฟังก์ชัน, อ็อบเจกต์, อาร์เรย์ และคุณสมบัติที่ทันสมัยเช่น `useState`, `.map()` สำหรับการเรนเดอร์ลิสต์ และการเรนเดอร์ตามเงื่อนไข
