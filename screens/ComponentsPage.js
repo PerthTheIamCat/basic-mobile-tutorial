@@ -1,4 +1,3 @@
-import React from "react";
 import {
   View,
   Text,
@@ -12,14 +11,22 @@ import {
 } from "react-native";
 import Constants from "expo-constants";
 import { CodeBox } from "../components/CodeBox";
+import { SafeAreaContext } from "../context/SafeAreaContext";
+import { useContext } from "react";
 
 const placeholderImage = {
   uri: "https://picsum.photos/seed/picsum/200/300",
 };
 
 export default function ComponentsPage() {
+  const { showSafeArea } = useContext(SafeAreaContext);
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      style={[
+        styles.container,
+        { marginTop: showSafeArea ? 0 : Constants.statusBarHeight },
+      ]}
+    >
       <View style={styles.block}>
         <Text style={styles.componentTitle}>View</Text>
         <Text style={styles.description}>
@@ -147,7 +154,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     backgroundColor: "#f5f5f5",
-    marginTop: Constants.statusBarHeight,
   },
   block: {
     marginVertical: 10,
@@ -155,6 +161,10 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 15,
     borderRadius: 8,
+    shadowRadius: 5,
+    shadowOpacity: 0.1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
   },
   componentTitle: {
     fontSize: 20,

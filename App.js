@@ -1,5 +1,5 @@
-import TapLayout from "./TabLayout";
+import DrawerLayout from "./layout/DrawerLayout";
 
 export default function App() {
-  return <TapLayout />;
+  return <DrawerLayout />;
 }

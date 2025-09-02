@@ -1,12 +1,16 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Constants from "expo-constants";
 
 import { CodeBox } from "../components/CodeBox";
 import { Button } from "../components/Button";
 import { FlexItemControl } from "../components/FlexItemControl";
 
+import { SafeAreaContext } from "../context/SafeAreaContext";
+
 export default function FlexPage() {
+  const { showSafeArea } = useContext(SafeAreaContext);
+
   const flexDirectionModes = ["row", "row-reverse", "column", "column-reverse"];
   const flexJustifyModes = [
     "flex-start",
@@ -42,7 +46,12 @@ export default function FlexPage() {
   const [blueFlexSize, setBlueFlexSize] = useState(0);
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        { marginTop: showSafeArea ? 0 : Constants.statusBarHeight },
+      ]}
+    >
       <View
         style={{
           flexDirection: flexDirectionModes[directionMode],
@@ -228,7 +237,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     backgroundColor: "#f5f5f5",
-    marginTop: Constants.statusBarHeight,
   },
   block: {
     marginVertical: 10,
