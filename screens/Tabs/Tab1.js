@@ -7,55 +7,49 @@ export default function Tab1({ navigation }) {
     <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 20 }}>
         {/* <Text>Tab Page</Text> */}
-
-        //Install
+        {/* Install */}
         <View style={styles.block}>
           <Text>ต้องมีการติดตั้ง</Text>
 
           <CodeBox>
             <Text>npm install @react-navigation/bottom-tabs</Text>
-            
           </CodeBox>
         </View>
-
-        //โมดูล
-                <View style={styles.block}>
+        {/* โมดูล */}
+        <View style={styles.block}>
           <Text>Tab Navigation</Text>
-          <Text style={styles.description}>
-           Modules
-          </Text>
+          <Text style={styles.description}>Modules</Text>
           <CodeBox>
             <Text>{"createBottomTabNavigator \n"}</Text>
-             <Text>{"createMaterialBottomTabNavigator \n"}</Text>
-              <Text>{"createMaterialTopTabNavigator \n"}</Text>
-            </CodeBox>
+            <Text>{"createMaterialBottomTabNavigator \n"}</Text>
+            <Text>{"createMaterialTopTabNavigator \n"}</Text>
+          </CodeBox>
         </View>
-
-        //ประกาสตัวแปร
+        {/* ประกาสตัวแปร */}
         <View style={styles.block}>
           {/* <Text>Tab Navigation</Text> */}
-          <Text style={styles.description}>
-          ต้องมีการประกาศตัวแปร
-          </Text>
+          <Text style={styles.description}>ต้องมีการประกาศตัวแปร</Text>
           <CodeBox>
             <Text>const Tab = createBottomTabNavigator();</Text>
-
-            </CodeBox>
+          </CodeBox>
         </View>
-        //stack navigation
-
-                <View style={styles.block}>
+        {/* stack navigation */}
+        <View style={styles.block}>
           <Text>Example</Text>
           {/* <Text style={styles.description}>
 
           </Text> */}
           <CodeBox>
             <Text>{"<Tab.Navigator>\n "}</Text>
-             <Text>{"  <Tab.Screen name=\"Stack\" component={StackScreen}/>\n"}</Text>
-             <Text>{"  <Tab.Screen name=\"Tab\" component={TabScreen}/>\n"}</Text>
-             <Text>{"  <Tab.Screen name=\"Drawer\" component={DrawerScreen}/>\n"}</Text>
-              <Text>{"</Tab.Navigator>\n "}</Text>
-            </CodeBox>
+            <Text>
+              {'  <Tab.Screen name="Stack" component={StackScreen}/>\n'}
+            </Text>
+            <Text>{'  <Tab.Screen name="Tab" component={TabScreen}/>\n'}</Text>
+            <Text>
+              {'  <Tab.Screen name="Drawer" component={DrawerScreen}/>\n'}
+            </Text>
+            <Text>{"</Tab.Navigator>\n "}</Text>
+          </CodeBox>
         </View>
       </View>
     </ScrollView>

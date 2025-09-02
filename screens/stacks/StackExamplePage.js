@@ -6,52 +6,55 @@ export default function StackExamplePage({ navigation }) {
     <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 20 }}>
         <Text>Stack Example Page</Text>
-        <View style={{padding:5}}>
+        <View style={{ padding: 5 }}>
           <Button
-          text="navigate to S1"
-          onPress={() => navigation.navigate("Stack1")}
-        />
-
+            text="navigate to S1"
+            onPress={() => navigation.navigate("Stack1")}
+          />
         </View>
-
-        
-        //Import
+        {/* Import */}
         <View style={styles.block}>
           <Text>Import container</Text>
-          <Text style={styles.description}>
-            สำหรับจัดเก็บการทางทั้งหมด
-          </Text>
+          <Text style={styles.description}>สำหรับจัดเก็บการทางทั้งหมด</Text>
           <CodeBox>
-            <Text>{"import { createDrawerNavigator } from \"@react-navigation/drawer\"; \n\n"}</Text>
-            <Text>{"import { NavigationContainer } from \"@react-navigation/native\";"}</Text>
+            <Text>
+              {
+                'import { createDrawerNavigator } from "@react-navigation/drawer"; \n\n'
+              }
+            </Text>
+            <Text>
+              {
+                'import { NavigationContainer } from "@react-navigation/native";'
+              }
+            </Text>
           </CodeBox>
         </View>
-
-        //create stack
-                <View style={styles.block}>
+        {/* create stack */}
+        <View style={styles.block}>
           <Text>สร้างระบบนำทางแบบ Stack</Text>
-          <Text style={styles.description}>
-            แบบ First in Last out
-          </Text>
+          <Text style={styles.description}>แบบ First in Last out</Text>
           <CodeBox>
             <Text>const Stack = createStackNavigator();</Text>
           </CodeBox>
         </View>
-
-        //stack navigation
-
-          <View style={styles.block}>
+        {/* stack navigation */}
+        <View style={styles.block}>
           <Text>Stack Navigation</Text>
           <Text style={styles.description}>กลับมายังโหนดก่อนหน้า</Text>
-          <CodeBox><Text>navigation.goBack();</Text></CodeBox>
+          <CodeBox>
+            <Text>navigation.goBack();</Text>
+          </CodeBox>
 
-           <Text style={styles.description}>ระบุโหนดที่ต้องการจะไป</Text>
-          <CodeBox><Text>navigation.navigate("ชื่อโหนด");</Text></CodeBox>
-          
+          <Text style={styles.description}>ระบุโหนดที่ต้องการจะไป</Text>
+          <CodeBox>
+            <Text>navigation.navigate("ชื่อโหนด");</Text>
+          </CodeBox>
+
           <Text style={styles.description}>ไปยังโหนดแรกสุด</Text>
-          <CodeBox><Text>navigation.popToTop;</Text></CodeBox>
+          <CodeBox>
+            <Text>navigation.popToTop;</Text>
+          </CodeBox>
         </View>
-
       </View>
     </ScrollView>
   );
