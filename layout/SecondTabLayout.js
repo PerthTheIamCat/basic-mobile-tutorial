@@ -3,11 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Entypo from "@expo/vector-icons/Entypo";
 
-import ComponentsPage from "../screens/ComponentsPage";
-import DimensionsPage from "../screens/DimensionsPage";
-import FlexWrapPage from "../screens/FlexWrapPage";
-
 import StackLayout from "./StackLayout";
+import TabScreen from "./DrawerScreen";
+import DrawerScreen  from "./DrawerScreen";
 
 export default function SecondTabLayout() {
   const Tab = createBottomTabNavigator();
@@ -52,8 +50,8 @@ export default function SecondTabLayout() {
             }}
           />
           <Tab.Screen
-            name="Tabs"
-            component={DimensionsPage}
+            name="Tabpage"
+            component={TabScreen}
             options={{
               tabBarIcon: ({ color }) => (
                 <Entypo name="menu" size={24} color={color} />
@@ -61,8 +59,8 @@ export default function SecondTabLayout() {
             }}
           />
           <Tab.Screen
-            name="Drawer"
-            component={FlexWrapPage}
+            name="drawer"
+            component={DrawerScreen}
             options={{
               tabBarIcon: ({ color }) => (
                 <Entypo name="menu" size={24} color={color} />
