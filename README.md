@@ -1,75 +1,75 @@
-# React Native Learning Demo
+# midterm — React Native (Expo) demo
 
-แอปพลิเคชันนี้เป็นโปรเจกต์สาธิตสำหรับการเรียนรู้แนวคิดพื้นฐานของ React Native แต่ละแท็บในแอปพลิเคชันจะครอบคลุมหัวข้อที่เฉพาะเจาะจง พร้อมคำอธิบายและตัวอย่างแบบโต้ตอบ
+โปรเจกต์ตัวอย่างที่สร้างด้วย Expo + React Native รวมตัวอย่างพื้นฐานเพื่อการเรียนรู้ เช่น การจัดวางด้วย Flexbox, การจัดการมิติหน้าจอ, คอมโพเนนต์พื้นฐาน และตัวอย่าง navigation (stack, drawer, tabs)
 
 ## เกี่ยวกับโปรเจกต์
 
-แอปพลิเคชันนี้ทำหน้าที่เป็นคู่มือแบบโต้ตอบสำหรับผู้เริ่มต้นเรียนรู้ React Native โดยครอบคลุมหัวข้อที่จำเป็นตั้งแต่การตั้งค่าสภาพแวดล้อมการพัฒนาไปจนถึงคอมโพเนนต์หลักและแนวคิด JavaScript ที่ใช้ในการพัฒนา React Native
+โปรเจกต์นี้เป็นคู่มือแบบโต้ตอบสำหรับผู้เริ่มต้น โดยรวมตัวอย่างหน้าจอ (screens), คอมโพเนนต์ย่อย และตัวอย่างการนำทางไว้ให้ศึกษา
 
-## การเริ่มต้นใช้งาน
+## ข้อกำหนด
 
-ทำตามขั้นตอนง่ายๆ เหล่านี้เพื่อตั้งค่าและรันโปรเจกต์บนเครื่องของคุณ
+* Node.js (แนะนำ LTS) และ npm — [https://nodejs.org/](https://nodejs.org/)
+* Expo Go (สำหรับทดสอบบนมือถือ)
+  * Android: [https://play.google.com/store/apps/details?id=host.exp.    exponent](https://play.google.com/store/apps/details?id=host.exp.exponent)
+  * iOS: [https://apps.apple.com/us/app/expo-go/id982107779](https://apps.apple.com/us/app/expo-go/id982107779)
 
-### สิ่งที่ต้องมี
+## ติดตั้งและรันอย่างรวดเร็ว
 
-ก่อนที่คุณจะเริ่ม ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้งสิ่งต่อไปนี้ในระบบของคุณแล้ว:
+1. คลอนโปรเจกต์ และเข้าโฟลเดอร์
 
-* **Node.js และ npm:** คุณสามารถดาวน์โหลดได้จาก [nodejs.org](https://nodejs.org/)
-* **Expo Go App:** ติดตั้งแอป Expo Go บนอุปกรณ์ iOS หรือ Android ของคุณเพื่อรันโปรเจกต์
-  * [ดาวน์โหลดสำหรับ Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
-  * [ดาวน์โหลดสำหรับ iOS](https://apps.apple.com/us/app/expo-go/id982107779)
+    ```sh
+    git clone https://github.com/PerthTheIamCat/basic-mobile-tutorial.git
+    cd basic-mobile-tutorial
+    ```
 
-### การติดตั้ง
+2. ติดตั้ง dependencies
 
-1. **Clone a repository:**
+    ```sh
+    npm install
+    ```
+
+3. เริ่ม Expo
+
+    ```sh
+    npm start
+    # หรือ
+    npx expo start
+    ```
+
+4. ทดสอบ
+
+* สแกน QR ด้วย Expo Go (มือถือ)
+* รันบน iOS simulator (macOS):
 
    ```sh
-   git clone <your-repository-url>
+   npm run ios
    ```
 
-2. **เข้าไปยังไดเรกทอรีของโปรเจกต์:**
+* รันบน Android emulator:
 
    ```sh
-   cd basic-mobile-tutorial
+   npm run android
    ```
 
-3. **ติดตั้งแพ็คเกจ NPM:**
+## สคริปต์สำคัญ (ใน `package.json`)
 
-   ```sh
-   npm install
-   ```
+* start: expo start
+* ios: expo start --ios
+* android: expo start --android
+* web: expo start --web
 
-## การใช้งาน
+## โครงสร้างโปรเจกต์สั้น ๆ
 
-เมื่อการติดตั้งเสร็จสมบูรณ์ คุณสามารถรันแอปพลิเคชันโดยใช้คำสั่งใดคำสั่งหนึ่งต่อไปนี้:
+* `App.js`, `index.js`, `app.json` — entry ของแอป
+* `screens/` — หน้าจอต่าง ๆ (ComponentsPage, FlexPage, JavaScriptPage, SetupPage, ฯลฯ)
+* `layout/` — ตัวอย่าง layout และ navigation (DrawerLayout, StackLayout, Tabs)
+* `components/` — คอมโพเนนต์ย่อย (Button.js, CodeBox.js, ฯลฯ)
+* `context/` — utilities เช่น `SafeAreaContext.js`
 
-* **เพื่อเริ่มเซิร์ฟเวอร์การพัฒนา:**
+บันทึกไฟล์แล้วรีโหลดแอปผ่าน Expo เพื่อดูผลทันที
 
-  ```sh
-  npx expo start
-  ```
+## ปัญหาที่พบบ่อย
 
-  คำสั่งนี้จะเปิดแท็บใหม่ในเบราว์เซอร์ของคุณพร้อมกับ Expo Developer Tools จากนั้นคุณสามารถสแกน QR code ด้วยแอป Expo Go บนโทรศัพท์ของคุณเพื่อเปิดโปรเจกต์
-
-* **เพื่อรันบน iOS simulator (สำหรับ macOS เท่านั้น):**
-
-  ```sh
-  npm run ios
-  ```
-
-* **เพื่อรันบน Android emulator:**
-
-  ```sh
-  npm run android
-  ```
-
-## หัวข้อที่ครอบคลุม
-
-แอปพลิเคชันแบ่งออกเป็นหลายแท็บ โดยแต่ละแท็บจะเน้นแนวคิดหลักที่แตกต่างกัน:
-
-* **Setup:** คำแนะนำเกี่ยวกับวิธีการสร้างและรันโปรเจกต์ Expo ใหม่
-* **Dimensions:** สาธิตวิธีการใช้ `Dimensions` และ `Constants` เพื่อสร้างเลย์เอาต์ที่ปรับเปลี่ยนตามขนาดหน้าจอที่แตกต่างกัน โดยเฉพาะการจัดการพื้นที่ของ status bar
-* **Flex:** สนามเด็กเล่นแบบโต้ตอบสำหรับการเรียนรู้คุณสมบัติของ `flexbox` เช่น `flexDirection`, `justifyContent`, และ `alignItems`
-* **Flex Wrap:** แสดงวิธีการทำงานของ `flexWrap` เพื่อควบคุมการตัดคำของรายการภายใน flex container
-* **Components:** ภาพรวมของคอมโพเนนต์พื้นฐานของ React Native เช่น `View`, `Text`, `Button`, `Image` และอื่นๆ พร้อมตัวอย่างโค้ด
-* **JavaScript:** ครอบคลุมแนวคิด JavaScript ที่จำเป็นสำหรับการพัฒนา React Native รวมถึงตัวแปร, ฟังก์ชัน, อ็อบเจกต์, อาร์เรย์ และคุณสมบัติที่ทันสมัยเช่น `useState`, `.map()` สำหรับการเรนเดอร์ลิสต์ และการเรนเดอร์ตามเงื่อนไข
+* หากเจอปัญหา dependency ให้รัน `npm install` อีกครั้ง
+* หากพอร์ตถูกใช้งานแล้ว ให้ปิด process ที่ใช้งานพอร์ตหรือรีสตาร์ท Metro bundler
+  
