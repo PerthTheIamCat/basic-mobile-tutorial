@@ -30,17 +30,48 @@ export default function Drawer1({ navigation }) {
             <Text>{"navigation."}</Text>
           </CodeBox>
         </View>
-        {/* ประกาศตัวแปร */}
-        {/* <View style={styles.block}>
-          <Text>ประกาศตัวแปร</Text>
+        {/* Options */}
+        <View style={styles.block}>
+          <Text>Options</Text>
           <Text style={styles.description}>
-          ต้องมีการประกาศตัวแปร
+         A generic title that can be used as a fallback for headerTitle and drawerLabel.
           </Text>
           <CodeBox>
-            <Text>const Tab = createBottomTabNavigator();</Text>
-
+            <Text>title</Text>
             </CodeBox>
-        </View> */}
+
+             <Text style={styles.description}>
+        Whether this screen should render the first time it's accessed. Defaults to true. Set it to false if you want to render the screen on initial render.
+         </Text>
+          <CodeBox>
+            <Text>lazy</Text>
+            </CodeBox>
+
+            {/*  */}
+
+                  <Text style={styles.description}>
+       {" String or a function that given { focused: boolean, color: string } returns a React.Node, to display in drawer sidebar. When undefined, scene title is used."}
+          </Text>
+          <CodeBox>
+            <Text>drawerLabel</Text>
+            </CodeBox>
+
+             <Text style={styles.description}>
+              {"Function, that given { focused: boolean, color: string, size: number } returns a React.Node to display in drawer sidebar."}
+       </Text>
+          <CodeBox>
+            <Text>{"drawerIcon"}</Text>
+            </CodeBox>
+
+            
+             <Text style={styles.description}>
+              {"Color for the icon and label in the active item in the drawer."}
+       </Text>
+          <CodeBox>
+            <Text>{"drawerActiveTintColor"}</Text>
+            </CodeBox>
+        </View>
+
         {/* stack navigation */}
         {/* <View style={styles.block}>
           <Text>Example</Text>

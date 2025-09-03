@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Entypo from "@expo/vector-icons/Entypo";
 
 import StackLayout from "./StackLayout";
-import drawer1 from "../screens/drawers/Drawer1";
+import drawer1 from "../screens/drawers/drawer1";
 import Tab1 from "../screens/Tabs/Tab1";
 
 export default function SecondTabLayout() {

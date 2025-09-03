@@ -1,4 +1,4 @@
-import DrawerLayout from "./layout/DrawerLayout";
+ import DrawerLayout from "./layout/DrawerLayout";
 
 export default function App() {
   return <DrawerLayout />;
