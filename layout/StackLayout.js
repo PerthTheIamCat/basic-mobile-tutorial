@@ -12,6 +12,7 @@ export default function StackLayout() {
       screenOptions={{
         headerStatusBarHeight: 0,
         headerStyle: { backgroundColor: "#F2F2F2" },
+        headerShown: true,
       }}
     >
       <Stack.Screen name="StackExample" component={StackExamplePage} />
