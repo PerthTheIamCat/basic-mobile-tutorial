@@ -1,7 +1,9 @@
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Entypo from "@expo/vector-icons/Entypo";
+import Octicons from "@expo/vector-icons/Octicons";
+import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 import StackLayout from "./StackLayout";
 import drawer1 from "../screens/drawers/drawer1";
@@ -45,7 +47,7 @@ export default function SecondTabLayout() {
             component={StackLayout}
             options={{
               tabBarIcon: ({ color }) => (
-                <Entypo name="menu" size={24} color={color} />
+                <Octicons name="stack" size={24} color={color} />
               ),
             }}
           />
@@ -54,7 +56,11 @@ export default function SecondTabLayout() {
             component={Tab1}
             options={{
               tabBarIcon: ({ color }) => (
-                <Entypo name="menu" size={24} color={color} />
+                <MaterialCommunityIcons
+                  name="table-row"
+                  size={24}
+                  color={color}
+                />
               ),
             }}
           />
@@ -63,7 +69,7 @@ export default function SecondTabLayout() {
             component={drawer1}
             options={{
               tabBarIcon: ({ color }) => (
-                <Entypo name="menu" size={24} color={color} />
+                <SimpleLineIcons name="drawer" size={24} color={color} />
               ),
             }}
           />

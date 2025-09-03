@@ -11,7 +11,7 @@ export default function Drawer1({ navigation }) {
           <Text>ต้องมีการติดตั้ง</Text>
 
           <CodeBox>
-            <Text>{"npm install @react-navigation/bottom-tabs \n"}</Text>
+            <Text>{"npm install @react-navigation/drawer \n\n"}</Text>
             <Text>
               {
                 "expo install react-native-gesture-handler react-native-reanimated "
@@ -34,42 +34,46 @@ export default function Drawer1({ navigation }) {
         <View style={styles.block}>
           <Text>Options</Text>
           <Text style={styles.description}>
-         A generic title that can be used as a fallback for headerTitle and drawerLabel.
+            ชื่อทั่วไปที่สามารถใช้เป็นค่าสำรองแทน headerTitle และ drawerLabel
           </Text>
           <CodeBox>
             <Text>title</Text>
-            </CodeBox>
+          </CodeBox>
 
-             <Text style={styles.description}>
-        Whether this screen should render the first time it's accessed. Defaults to true. Set it to false if you want to render the screen on initial render.
-         </Text>
+          <Text style={styles.description}>
+            กำหนดว่าหน้าจอนี้จะถูกเรนเดอร์เมื่อเข้าถึงครั้งแรกหรือไม่
+            ค่าเริ่มต้นเป็น true — ตั้งค่าเป็น false
+            หากต้องการให้หน้าจอถูกเรนเดอร์ตั้งแต่การเรนเดอร์เริ่มต้น
+          </Text>
           <CodeBox>
             <Text>lazy</Text>
-            </CodeBox>
+          </CodeBox>
 
-            {/*  */}
+          {/*  */}
 
-                  <Text style={styles.description}>
-       {" String or a function that given { focused: boolean, color: string } returns a React.Node, to display in drawer sidebar. When undefined, scene title is used."}
+          <Text style={styles.description}>
+            สตริงหรือฟังก์ชันที่รับ {"{ focused: boolean, color: string }"}{" "}
+            และคืนค่า React.Node เพื่อแสดงในแถบด้านข้างของ Drawer — หากไม่กำหนด
+            จะใช้ชื่อฉากเป็นค่าเริ่มต้น
           </Text>
           <CodeBox>
             <Text>drawerLabel</Text>
-            </CodeBox>
+          </CodeBox>
 
-             <Text style={styles.description}>
-              {"Function, that given { focused: boolean, color: string, size: number } returns a React.Node to display in drawer sidebar."}
-       </Text>
+          <Text style={styles.description}>
+            ฟังก์ชันที่รับ {"{ focused: boolean, color: string, size: number }"}{" "}
+            แล้วคืนค่า React.Node เพื่อแสดงไอคอนในแถบด้านข้างของ Drawer
+          </Text>
           <CodeBox>
             <Text>{"drawerIcon"}</Text>
-            </CodeBox>
+          </CodeBox>
 
-            
-             <Text style={styles.description}>
-              {"Color for the icon and label in the active item in the drawer."}
-       </Text>
+          <Text style={styles.description}>
+            สีของไอคอนและป้ายสำหรับรายการที่กำลังใช้งานใน Drawer
+          </Text>
           <CodeBox>
             <Text>{"drawerActiveTintColor"}</Text>
-            </CodeBox>
+          </CodeBox>
         </View>
 
         {/* stack navigation */}

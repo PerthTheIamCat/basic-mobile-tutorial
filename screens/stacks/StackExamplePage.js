@@ -4,7 +4,7 @@ import { CodeBox } from "../../components/CodeBox";
 export default function StackExamplePage({ navigation }) {
   return (
     <ScrollView style={{ flex: 1 }}>
-      <View style={{ flex: 1, padding: 20 }}>
+      <View style={{ flex: 1, padding: 20, gap: 20 }}>
         <Text>Stack Example Page</Text>
         <View style={{ padding: 5 }}>
           <Button
@@ -18,9 +18,7 @@ export default function StackExamplePage({ navigation }) {
           <Text style={styles.description}>สำหรับจัดเก็บการทางทั้งหมด</Text>
           <CodeBox>
             <Text>
-              {
-                'import { createDrawerNavigator } from "@react-navigation/drawer"; \n\n'
-              }
+              {`import { createStackNavigator } from "@react-navigation/stack";\n\n`}
             </Text>
             <Text>
               {
